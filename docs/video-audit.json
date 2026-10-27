@@ -4,112 +4,112 @@
     {
       "audio": "original",
       "ear": "L",
-      "correlation": 0.9623441754592811,
-      "offset_s": 0.049833333333333396
+      "correlation": 0.962847986530148,
+      "offset_s": 0.05216666666666647
     },
     {
       "audio": "original",
       "ear": "R",
-      "correlation": 0.9722613343540844,
-      "offset_s": 0.049833333333333396
+      "correlation": 0.9721342651302697,
+      "offset_s": 0.05216666666666647
     },
     {
       "audio": "external",
       "ear": "L",
-      "correlation": 0.9996368824479044,
-      "offset_s": 0.06849999999999845
+      "correlation": 0.9996314532882483,
+      "offset_s": 0.06016666666666737
     },
     {
       "audio": "external",
       "ear": "R",
-      "correlation": 0.999636882342713,
-      "offset_s": 0.06849999999999845
+      "correlation": 0.9996314532882483,
+      "offset_s": 0.06016666666666737
     },
     {
       "audio": "trial0",
       "ear": "L",
-      "correlation": 0.9972154433194719,
-      "offset_s": 0.1231666666666662
+      "correlation": 0.9970902237443777,
+      "offset_s": 0.08816666666666606
     },
     {
       "audio": "trial0",
       "ear": "R",
-      "correlation": 0.9968240274282758,
-      "offset_s": 0.1231666666666662
+      "correlation": 0.9968249513184442,
+      "offset_s": 0.08816666666666606
     },
     {
       "audio": "trial1",
       "ear": "L",
-      "correlation": 0.9987475976755524,
-      "offset_s": 0.1418333333333308
+      "correlation": 0.9987627923366282,
+      "offset_s": 0.11216666666666697
     },
     {
       "audio": "trial1",
       "ear": "R",
-      "correlation": 0.9984278755416518,
-      "offset_s": 0.1418333333333308
+      "correlation": 0.998575180429152,
+      "offset_s": 0.11216666666666697
     },
     {
       "audio": "trial2",
       "ear": "L",
-      "correlation": 0.9988316046270526,
-      "offset_s": 0.16050000000000608
+      "correlation": 0.9987317619750834,
+      "offset_s": 0.13616666666667498
     },
     {
       "audio": "trial2",
       "ear": "R",
-      "correlation": 0.9985596643273313,
-      "offset_s": 0.16050000000000608
+      "correlation": 0.9985414482022457,
+      "offset_s": 0.13616666666667498
     },
     {
       "audio": "original",
       "ear": "L",
-      "correlation": 0.9626752850735008,
-      "offset_s": 0.17650000000000432
+      "correlation": 0.9623166174650599,
+      "offset_s": 0.1841666666666697
     },
     {
       "audio": "original",
       "ear": "R",
-      "correlation": 0.9725424276609789,
-      "offset_s": 0.17650000000000432
+      "correlation": 0.9724068969896074,
+      "offset_s": 0.1841666666666697
     },
     {
       "audio": "routeA",
       "ear": "L",
-      "correlation": 0.9972372077577096,
-      "offset_s": 0.296500000000016
+      "correlation": 0.9974543524062793,
+      "offset_s": 0.35216666666668317
     },
     {
       "audio": "routeA",
       "ear": "R",
-      "correlation": 0.9981980781762876,
-      "offset_s": 0.296500000000016
+      "correlation": 0.9980197980923972,
+      "offset_s": 0.35216666666668317
     },
     {
       "audio": "routeB",
       "ear": "L",
-      "correlation": 0.9980012840942166,
-      "offset_s": 0.3338333333333452
+      "correlation": 0.9979992871140451,
+      "offset_s": 0.38416666666667965
     },
     {
       "audio": "routeB",
       "ear": "R",
-      "correlation": 0.998489202380014,
-      "offset_s": 0.3338333333333452
+      "correlation": 0.9984150327029795,
+      "offset_s": 0.38416666666667965
     },
     {
       "audio": "routeC",
       "ear": "L",
-      "correlation": 0.9982780200149117,
-      "offset_s": 0.36583333333333456
+      "correlation": 0.9982803289750546,
+      "offset_s": 0.416166666666669
     },
     {
       "audio": "routeC",
       "ear": "R",
-      "correlation": 0.998285248489908,
-      "offset_s": 0.36583333333333456
+      "correlation": 0.9983070992375596,
+      "offset_s": 0.416166666666669
     }
   ],
-  "video_sha256": "16c20e3add3734ce89a050d5c13c9ba274115f3f3479228bad3d850894e10cc5",
+  "video_sha256": "af25df29c38941cf0203f9e4dde85b845489d73b9f15fa6bb4c187fe9e2d262b",
   "method": "Each ear, middle1s of actual chapter, +/- .8s timing search. Timestamped silence restored; no audio replacement."
 }

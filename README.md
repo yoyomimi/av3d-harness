@@ -66,7 +66,7 @@ We keep that same moment throughout, so you can hear what each change actually d
 
 **Video source: Nymeria-Plus.**
 
-The film opens with 2.6 seconds of silent original footage. Then the original
+The film opens with 4 seconds of silent original footage with the project title and introduction. Then the original
 recording and reconstructed Habitat scene play together. A timed semantic
 caption appears on the recording clock. Peel uses semantic descriptions to separate the recording into audio tracks.
 In this example, it removes a clothing-rustle

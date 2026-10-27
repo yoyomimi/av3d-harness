@@ -44,7 +44,7 @@ for c in D['chapters']:
 D['chapters']=combined
 # Deliberate chapter cards: the active tool and one plain-language purpose.
 transitions={'peel':(1,'Use semantic descriptions to separate the recording into audio tracks.'),'candidates':(2,'Match the speech event to possible people in the 3D scene.'),'match':(3,'Test perception targets and room-physics candidates.'),'label':(4,'Save the fitted source and a candidate label for review.'),'routes':(5,'Keep the source fixed. Hear three different listening paths.')}
-chapters=[{'stage':'Original · silent opening','kind':'coldopen','closing':False,'duration':2.6,'audio':None,'clip_start':.7,'trial':0,'freeze':False,'tool':''}];seen=set();clock=0.
+chapters=[{'stage':'Original · silent opening','kind':'coldopen','closing':False,'duration':4.0,'audio':None,'clip_start':.7,'trial':0,'freeze':False,'tool':''}];seen=set();clock=0.
 for c in D['chapters']:
  if c['kind'] in transitions and c['kind'] not in seen:
   module,note=transitions[c['kind']];seen.add(c['kind']);chapters.append({'stage':'Next · '+['Perception','Semantic Audio Peel','Candidates','Fit to GT','Merge Trajectory','Rerender'][module],'kind':'transition','module':module,'note':note,'duration':4.0 if module==3 else 1.8,'audio':None,'clip_start':.7,'trial':0,'freeze':True,'tool':''})
