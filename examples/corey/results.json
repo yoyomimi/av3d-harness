@@ -1,0 +1,50 @@
+{
+  "status": "PASS_EXECUTION",
+  "objective": "channel_energy_mae_db + 250ms ild_mae_db; lower is better",
+  "selected": "asset-3-a0.8",
+  "candidates": [
+    {
+      "id": "asset-3-a0.8",
+      "candidate": "asset_03",
+      "absorption": 0.8,
+      "gain": 3.937231163487626,
+      "objective": 2.7501606760326878,
+      "energy_gap_db": -1.9286549331065747e-15,
+      "channel_energy_mae_db": 0.2887878159491598,
+      "ild_mae_db": 2.461372860083528
+    },
+    {
+      "id": "asset-3-a0.1",
+      "candidate": "asset_03",
+      "absorption": 0.1,
+      "gain": 2.409164875956741,
+      "objective": 3.5208604776312025,
+      "energy_gap_db": 1.928654933106574e-15,
+      "channel_energy_mae_db": 0.580118946726598,
+      "ild_mae_db": 2.9407415309046043
+    },
+    {
+      "id": "asset-2-a0.8",
+      "candidate": "asset_02",
+      "absorption": 0.8,
+      "gain": 4.0,
+      "objective": 9.830865760465855,
+      "energy_gap_db": -7.663910999129645,
+      "channel_energy_mae_db": 7.355011531733638,
+      "ild_mae_db": 2.4758542287322167
+    },
+    {
+      "id": "asset-1-a0.8",
+      "candidate": "asset_01",
+      "absorption": 0.8,
+      "gain": 4.0,
+      "objective": 15.203968674239682,
+      "energy_gap_db": -10.55465598895995,
+      "channel_energy_mae_db": 10.364964468437028,
+      "ild_mae_db": 4.839004205802655
+    }
+  ],
+  "scope": "Wet speech layer; physical identity unverified. Fit reference is not held-out GT.",
+  "training": "NOT RUN",
+  "cached_IR_replay": true
+}

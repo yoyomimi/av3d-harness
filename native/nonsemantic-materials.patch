@@ -1,0 +1,38 @@
+--- a/src/esp/sensor/AudioSensor.cpp
++++ b/src/esp/sensor/AudioSensor.cpp
+@@ -494,6 +494,16 @@
+ void AudioSensor::loadMesh(sim::Simulator& sim) {
+   ESP_DEBUG() << logHeader_ << "Loading non-semantic mesh";
+   CORRADE_ASSERT(context, "loadMesh: context should exist", );
++  // Explicit uniform material hypothesis for non-semantic reconstructed meshes.
++  // Preserve the previous default route when no material JSON was requested.
++  if (!audioMaterialsJsonSet_ && !audioMaterialsJSON_.empty()) {
++    const RLRA_Error materialError = RLRA_SetMaterialDatabaseJSON(
++        context, audioMaterialsJSON_.c_str());
++    CORRADE_ASSERT(materialError == RLRA_Success,
++                   "Non-semantic audio material database load failed", );
++    audioMaterialsJsonSet_ = true;
++    ESP_WARNING() << "Non-semantic default material override active";
++  }
+   esp::assets::MeshData::ptr sceneMesh = sim.getJoinedMesh(true);
+ 
+   ESP_DEBUG() << "Vertex count : " << sceneMesh->vbo.size()
+@@ -513,7 +523,7 @@
+   // Submit the index data with default material.
+   error = RLRA_AddMeshIndices( context,
+       sceneMesh->ibo.data(), sceneMesh->ibo.size(), 3,
+-      nullptr );
++      audioMaterialsJSON_.empty() ? nullptr : "default" );
+   if ( error != RLRA_Success )
+   {
+     ESP_ERROR() << "Couldn't submit audio mesh indices";
+--- a/src/esp/bindings/SensorBindings.cpp
++++ b/src/esp/bindings/SensorBindings.cpp
+@@ -419,6 +419,7 @@
+       .def("setAudioListenerTransform", &AudioSensor::setAudioListenerTransform)
+       .def("runSimulation", &AudioSensor::runSimulation)
+       .def("setAudioMaterialsJSON", &AudioSensor::setAudioMaterialsJSON)
++      .def("supportsNonSemanticMaterials", [](const AudioSensor&) { return true; })
+       .def("setListenerHRTF", &AudioSensor::setListenerHRTF)
+       .def("getIR", &AudioSensor::getIR)
+       .def("writeIRWave", &AudioSensor::writeIRWave)

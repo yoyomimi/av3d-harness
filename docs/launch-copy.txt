@@ -1,0 +1,48 @@
+X — main post (attach demo.mp4 natively)
+
+Loved the #Astra 3D demos? Now listen. 🎧
+
+AV3D-Harness: perceive → separate audio → fit physics → rerender.
+
+One recorded moment. Three new listening paths.
+
+Code: https://github.com/yoyomimi/av3d-harness
+
+#Real2Sim
+
+X — optional first reply / technical credit
+
+Under the hood: #Gemini semantics, #SAMAudio separation, and Habitat + SoundSpaces. Candidate sources come from visual assets; energy and left/right differences rank the renders. Fitted trajectories can become candidate labels—not a claim of completed self-training. Video source: Nymeria-Plus.
+
+LinkedIn — native video post
+
+You've seen 3D reconstructions. What happens when you change where you listen?
+
+The recent Astra demos got us thinking about another part of realistic scenes: sound. We built AV3D-Harness to make audio-visual reconstruction an explicit, measurable loop.
+
+Starting with an in-the-wild recording and a reconstructed scene, it:
+• perceives the audible events;
+• uses semantic descriptions to separate audio tracks;
+• proposes possible source locations from visual assets;
+• renders and compares acoustic hypotheses;
+• rerenders the same moment along three new listening paths.
+
+Watch with headphones—the ending lets you hear each route in turn.
+
+The initial evaluator uses energy and left/right balance rather than an opaque learned score. Every candidate and parameter choice leaves a receipt. Fitted trajectories can also supply candidate training labels, with validation before any future training loop.
+
+This is a research prototype: the retained speech layer still contains room background, and source identity is not independently verified. The code includes a reproducible runner, agent instructions, tool contracts, and the demo builder.
+
+Built with Gemini, SAM Audio, Habitat and SoundSpaces. Video source: Nymeria-Plus.
+
+If you're working on embodied or omnimodal systems, what would you add to the evaluator beyond energy and stereo balance?
+
+Code: https://github.com/yoyomimi/av3d-harness
+
+#EmbodiedAI #Real2Sim #SpatialAudio #OmnimodalAI #OpenSource
+
+Publishing notes
+- These are drafts; no social post has been sent.
+- Use #Real2Sim for this demo. Do not imply that robot Sim2Real transfer was evaluated.
+- No unverified @Astra handle is included. For LinkedIn mentions, select the official organization page in the composer rather than assuming an X handle resolves there.
+- The paper/project references and actual dependency names are in the repository documentation. No endorsement by any referenced organization is implied.

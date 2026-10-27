@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "audio": "original",
+      "ear": "L",
+      "correlation": 0.9626465012473817,
+      "offset_s": 0.04883333333333306
+    },
+    {
+      "audio": "original",
+      "ear": "R",
+      "correlation": 0.9721686225452387,
+      "offset_s": 0.04883333333333306
+    },
+    {
+      "audio": "external",
+      "ear": "L",
+      "correlation": 0.9995690060879767,
+      "offset_s": 0.06216666666666448
+    },
+    {
+      "audio": "external",
+      "ear": "R",
+      "correlation": 0.9995690060879767,
+      "offset_s": 0.06216666666666448
+    },
+    {
+      "audio": "trial0",
+      "ear": "L",
+      "correlation": 0.9972391472598717,
+      "offset_s": 0.23149999999999693
+    },
+    {
+      "audio": "trial0",
+      "ear": "R",
+      "correlation": 0.9973108579128068,
+      "offset_s": 0.23149999999999693
+    },
+    {
+      "audio": "trial1",
+      "ear": "L",
+      "correlation": 0.9986076648648243,
+      "offset_s": 0.3301666666666634
+    },
+    {
+      "audio": "trial1",
+      "ear": "R",
+      "correlation": 0.9985732908659727,
+      "offset_s": 0.3301666666666634
+    },
+    {
+      "audio": "trial2",
+      "ear": "L",
+      "correlation": 0.9987469568552614,
+      "offset_s": 0.42883333333332985
+    },
+    {
+      "audio": "trial2",
+      "ear": "R",
+      "correlation": 0.9985457378242786,
+      "offset_s": 0.42883333333332985
+    },
+    {
+      "audio": "original",
+      "ear": "L",
+      "correlation": 0.9630177723494323,
+      "offset_s": 0.49816666666666976
+    },
+    {
+      "audio": "original",
+      "ear": "R",
+      "correlation": 0.972066721328138,
+      "offset_s": 0.49816666666666976
+    },
+    {
+      "audio": "routeA",
+      "ear": "L",
+      "correlation": 0.9974531611889994,
+      "offset_s": 0.6608333333333434
+    },
+    {
+      "audio": "routeA",
+      "ear": "R",
+      "correlation": 0.9982249389367823,
+      "offset_s": 0.6608333333333434
+    },
+    {
+      "audio": "routeB",
+      "ear": "L",
+      "correlation": 0.9978821667924952,
+      "offset_s": 0.6981666666666726
+    },
+    {
+      "audio": "routeB",
+      "ear": "R",
+      "correlation": 0.9983941596302611,
+      "offset_s": 0.6981666666666726
+    },
+    {
+      "audio": "routeC",
+      "ear": "L",
+      "correlation": 0.9983551945082312,
+      "offset_s": 0.7301666666666691
+    },
+    {
+      "audio": "routeC",
+      "ear": "R",
+      "correlation": 0.9984210076824377,
+      "offset_s": 0.7301666666666691
+    }
+  ],
+  "video_sha256": "0062705a28b9b471ce13c32864c80fc647af8d8484a06cd9fd9587832ca7bc1e",
+  "method": "Each ear, middle1s of actual chapter, +/- .8s timing search. Timestamped silence restored; no audio replacement."
+}

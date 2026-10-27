@@ -1,0 +1,21 @@
+{
+  "id": "reflective",
+  "material_scope": "uniform static-mesh hypothesis, not material GT",
+  "settings": {
+    "maxIRLength": 2.0,
+    "globalVolume": 0.25,
+    "direct": true,
+    "indirect": true,
+    "diffraction": true,
+    "transmission": false,
+    "frequencyBands": 4,
+    "indirectRayDepth": 200,
+    "indirectSHOrder": 1,
+    "indirectRayCount": 5000,
+    "unitScale": 1.0,
+    "temporalCoherence": false
+  },
+  "materials_json": "materials.json",
+  "absorption": 0.8,
+  "file": "acoustic-profiles/reflective.json"
+}
