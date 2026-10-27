@@ -34,9 +34,9 @@ provide your own only when intentionally running a live semantic request.
 
 ## Final film
 
-PASS: 1920×1080, 30 fps, H.264/AAC stereo, 68.27 seconds. Full output decoding
+PASS: 1920×1080, 30 fps, H.264/AAC stereo, 70.11 seconds. Full output decoding
 completed without errors. All 18 ear/chapter comparisons passed the 0.9 source
-correlation threshold (minimum 0.9626). This checks source identity in each audible
+correlation threshold (minimum 0.9623). This checks source identity in each audible
 chapter with a ±0.8s search, not frame-exact synchronization certification.
 Candidate, three-route and end-credit frames were inspected from the exported MP4.
 All candidate avatars and the semantic target appear together during a 5.7s chapter.
@@ -45,3 +45,7 @@ The WebM-to-MP4 conversion emitted an Opus packet-header warning; the resulting 
 fully decodes and passes the audio checks above. See [audio audit](video-audit.json).
 Three standalone route outputs each decode successfully and contain 3.2 seconds of
 1080×1080 H.264 video and 48kHz stereo AAC audio.
+
+Latest revision: silent original-footage opening (first 2.4 seconds verified at zero
+audio peak), 4-second Fit-to-GT explanation, explicit target/physics testing and
+auto-adjustment labels. Updated MP4 and ear/chapter audit both pass.

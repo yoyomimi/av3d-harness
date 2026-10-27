@@ -27,7 +27,7 @@ AV3D-Harness connects **perception tools**, a **3D acoustic simulator**, and an
 **evaluation loop** through explicit file contracts. An agent can run each stage,
 inspect its outputs, and compare another hypothesis using the same reference audio.
 
-![AV3D-Harness video workflow: Perception → Peel → Candidates → Fit physics → Merge → Rerender](docs/architecture.svg)
+![AV3D-Harness video workflow: Perception → Peel → Candidates → Fit to GT → Merge → Rerender](docs/architecture.svg)
 
 **Inputs:** a recording, a reconstructed scene, registered camera/listener poses,
 and visual assets with world-space trajectories. Scene reconstruction is upstream;
@@ -66,7 +66,8 @@ We keep that same moment throughout, so you can hear what each change actually d
 
 **Video source: Nymeria-Plus.**
 
-First, the original recording and reconstructed Habitat scene play together. A timed semantic
+The film opens with 2.6 seconds of silent original footage. Then the original
+recording and reconstructed Habitat scene play together. A timed semantic
 caption appears on the recording clock. Peel uses semantic descriptions to separate the recording into audio tracks.
 In this example, it removes a clothing-rustle
 component; the retained speech layer is played directly. We chose this route because

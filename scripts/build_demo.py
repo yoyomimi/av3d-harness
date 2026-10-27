@@ -32,7 +32,8 @@ for c in D['chapters']:
  if c['kind']=='caption':c['tool']='Perception · semantic events';c['stage']='Perception'
  if c['kind'] in ['perceive','candidates']:c.update(stage='Propose Candidates',tool='Semantic events → visual assets',note='Speech → person assets → trajectories')
  if c['kind']=='peel':c.update(stage='Semantic Audio Peel',tool='Semantics → separated audio tracks',note='Semantic target · speech / cutting-board phrase')
- if c['kind']=='match':c['note']='Match visual object '+str(rows[c['trial']]['candidate_number']).zfill(2)
+ if c['kind']=='match':c['note']='Test perception target '+str(rows[c['trial']]['candidate_number']).zfill(2)
+ if c.get('stage')=='Fit Physics' or c['kind']=='benchmark':c.update(stage='Fit to GT',tool='Test → Render → Compare GT → Auto-adjust')
 # One held overview: semantic target and all compatible assets appear together.
 combined=[];overview=None
 for c in D['chapters']:
@@ -42,11 +43,11 @@ for c in D['chapters']:
  else:combined.append(c)
 D['chapters']=combined
 # Deliberate chapter cards: the active tool and one plain-language purpose.
-transitions={'peel':(1,'Use semantic descriptions to separate the recording into audio tracks.'),'candidates':(2,'Match the speech event to possible people in the 3D scene.'),'match':(3,'Test source positions and acoustics against the recording.'),'label':(4,'Save the fitted source and a candidate label for review.'),'routes':(5,'Keep the source fixed. Hear three different listening paths.')}
-chapters=[{'stage':'AV3D-Harness','kind':'brand','closing':False,'duration':2.6,'audio':None,'clip_start':.7,'trial':0,'freeze':True,'tool':''}];seen=set();clock=0.
+transitions={'peel':(1,'Use semantic descriptions to separate the recording into audio tracks.'),'candidates':(2,'Match the speech event to possible people in the 3D scene.'),'match':(3,'Test perception targets and room-physics candidates.'),'label':(4,'Save the fitted source and a candidate label for review.'),'routes':(5,'Keep the source fixed. Hear three different listening paths.')}
+chapters=[{'stage':'Original · silent opening','kind':'coldopen','closing':False,'duration':2.6,'audio':None,'clip_start':.7,'trial':0,'freeze':False,'tool':''}];seen=set();clock=0.
 for c in D['chapters']:
  if c['kind'] in transitions and c['kind'] not in seen:
-  module,note=transitions[c['kind']];seen.add(c['kind']);chapters.append({'stage':'Next · '+['Perception','Semantic Audio Peel','Candidates','Fit Physics','Merge Trajectory','Rerender'][module],'kind':'transition','module':module,'note':note,'duration':1.8,'audio':None,'clip_start':.7,'trial':0,'freeze':True,'tool':''})
+  module,note=transitions[c['kind']];seen.add(c['kind']);chapters.append({'stage':'Next · '+['Perception','Semantic Audio Peel','Candidates','Fit to GT','Merge Trajectory','Rerender'][module],'kind':'transition','module':module,'note':note,'duration':4.0 if module==3 else 1.8,'audio':None,'clip_start':.7,'trial':0,'freeze':True,'tool':''})
  chapters.append(c)
 chapters.append({'stage':'AV3D-Harness · finale','kind':'brand','closing':True,'duration':3.,'audio':None,'clip_start':3.8,'trial':2,'freeze':True,'tool':''})
 for c in chapters:c['start']=clock;clock+=c['duration']
